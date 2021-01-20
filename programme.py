@@ -5,7 +5,6 @@ import LR
 import CU
 import time
 from soundplayer import SoundPlayer
-import test
 #on initialise les ports D2 et D3 pour les boutons poussoirs,et on in
 switchPin = 2
 switchPin2 = 4
