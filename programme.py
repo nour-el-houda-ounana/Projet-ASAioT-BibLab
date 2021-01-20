@@ -1,3 +1,5 @@
+import os
+os.chdir('/home/pi')
 import ecranLCD as LCD
 import grovepi as gp
 import ListeLivre as LL
@@ -5,7 +7,6 @@ import LR
 import CU
 import time
 from soundplayer import SoundPlayer
-import test
 #on initialise les ports D2 et D3 pour les boutons poussoirs,et on in
 switchPin = 2
 switchPin2 = 4
@@ -62,7 +63,7 @@ while True :
 			if const=="play" or const=="break"or const=="plays":
 				son = LL.son()
 				aud = son[hits-1]
-				audio= './Leslivres/'+aud
+				audio= '/home/pi/Leslivres/'+aud
 				p= SoundPlayer(audio)
 				LR.allumerLedRouge()
 				p.play()
