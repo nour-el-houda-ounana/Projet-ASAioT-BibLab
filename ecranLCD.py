@@ -68,14 +68,4 @@ def setText_norefresh(text):
 		count += 1
 		bus.write_byte_data(DISPLAY_TEXT_ADDR,0x40,ord(c))
 
-# example code
-if __name__=="__main__":
-	setText("Bienvenue sur le Biblab !")
-	setRGB(64,128,0)
-	time.sleep(2)
-	for c in range(0,100):
-		setText_norefresh("Menu".format(str(c)))
-		setRGB(c,255-c,c)
-		time.sleep(0.1)
-	setRGB(0,255,0)
-	setText("Bye bye")
+
